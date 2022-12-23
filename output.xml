@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.9.13 on win32)" generated="20221223 07:57:39.705" rpa="true" schemaversion="3">
+<suite id="s1" name="Tasks" source="d:\Robocorp\TbExtaction\tasks.robot">
+<test id="s1-t1" name="Minimal task" line="11">
+<kw name="Get Table" library="YASH.Tabula">
+<var>${Table}</var>
+<arg>1710.05006.pdf</arg>
+<arg>0</arg>
+<msg timestamp="20221223 07:57:48.050" level="WARN">Got stderr: Dec 23, 2022 7:57:44 AM org.apache.pdfbox.pdmodel.font.PDSimpleFont toUnicode
+WARNING: No Unicode mapping for circlecopyrt (13) in font XBRSXS+CMSY8
+</msg>
+<msg timestamp="20221223 07:57:48.105" level="INFO">${Table} =      Method    AVG   Net-   Neg.  Streaks Milia-
+0    / Rank    NaN   work   Net-      NaN   Like
+1       NaN    NaN    NaN   work      NaN   Cyst
+2  [22] / 1  0.895  0.945  0.869    0.960  0.807
+3  [...</msg>
+<status status="PASS" starttime="20221223 07:57:43.679" endtime="20221223 07:57:48.106"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${Table}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20221223 07:57:48.136" level="INFO">     Method    AVG   Net-   Neg.  Streaks Milia-
+0    / Rank    NaN   work   Net-      NaN   Like
+1       NaN    NaN    NaN   work      NaN   Cyst
+2  [22] / 1  0.895  0.945  0.869    0.960  0.807
+3  [23] / 2  0.833  0.835  0.762    0.896  0.838
+4  [23] / 3  0.832  0.828  0.762    0.900  0.837</msg>
+<status status="PASS" starttime="20221223 07:57:48.108" endtime="20221223 07:57:48.137"/>
+</kw>
+<kw name="Get All Tables" library="YASH.Tabula">
+<var>${Table1}</var>
+<arg>1710.05006.pdf</arg>
+<msg timestamp="20221223 07:57:52.423" level="WARN">Got stderr: Dec 23, 2022 7:57:48 AM org.apache.pdfbox.pdmodel.font.PDSimpleFont toUnicode
+WARNING: No Unicode mapping for circlecopyrt (13) in font XBRSXS+CMSY8
+</msg>
+<msg timestamp="20221223 07:57:52.520" level="INFO">${Table1} = [     Method    AVG   Net-   Neg.  Streaks Milia-
+0    / Rank    NaN   work   Net-      NaN   Like
+1       NaN    NaN    NaN   work      NaN   Cyst
+2  [22] / 1  0.895  0.945  0.869    0.960  0.807
+3  ...</msg>
+<status status="PASS" starttime="20221223 07:57:48.139" endtime="20221223 07:57:52.521"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${Table1}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20221223 07:57:52.606" level="INFO">[     Method    AVG   Net-   Neg.  Streaks Milia-
+0    / Rank    NaN   work   Net-      NaN   Like
+1       NaN    NaN    NaN   work      NaN   Cyst
+2  [22] / 1  0.895  0.945  0.869    0.960  0.807
+3  [23] / 2  0.833  0.835  0.762    0.896  0.838
+4  [23] / 3  0.832  0.828  0.762    0.900  0.837,          Method   AVG-     M-    SK-   M-.1   M-.2   M-.3   M-.4   M-.5  SK-.1  SK-.2
+0           NaN    AUC    AUC    AUC   SP82   SP89   SP95   SENS   SPEC   SENS   SPEC
+1  [24] Top AVG  0.911  0.868  0.953  0.729  0.588  0.366  0.735  0.851  0.978  0.773
+2   [25] Top SK  0.910  0.856  0.965  0.727  0.555  0.404  0.103  0.998  0.178  0.998
+3    [26] Top M  0.908  0.874  0.943  0.747  0.590  0.395  0.547  0.950  0.356  0.990
+4         AVGSC  0.913  0.872  0.954  0.778  0.605  0.435  0.214  0.988  0.600  0.975
+5         L-SVM  0.926  0.892  0.960  0.834  0.692  0.571  0.718  0.901  0.878  0.931
+6        NL-SVM  0.904  0.853  0.955  0.801  0.449  0.168  0.675  0.909  0.889  0.928,    melanoma classification. This may reflect aspects of the dis-  ...  formance. Future challenges may adjust the technical format
+0   ease, or bias in the dataset. The best perform...             ...  of the task to more closely align with existin...          
+1   the team that added additional weakly labelled...             ...  tion benchmarks to better facilitate ease of p...          
+2   notations to their training data [25]. 3) The ...             ...  example, the output can be formatted as a segm...          
+3   performer was not the best in any single class...             ...                       bounding-box detection task.          
+4   gory. 4) The most complex fusion approach (NL-...             ...  Analysis of the classification task demonstrat...          
+5   to a decrease in performance, whereas simpler ...             ...  sembles of deep learning approaches and additi...          
+6   to overall improvements in performance, consis...             ...  to the highest performance. In addition, colla...          
+7   vious findings [17]. This challenge is the sec...             ...  of all participant systems outperformed any si...          
+8   mark to demonstrate that a collaborative among...             ...  alone. With the exception of [25], submitted m...          
+9   pants outperforms any single method alone. 5) ...             ...  ate little human interpretable evidence of dis...          
+10  olds balanced sensitivity and specificity. Pro...             ...  Future work or challenges may give more focus ...          
+11  normalization in fusions is effective at balan...             ...    for proper integration into clinical workflows.          
+12                          and specificity [13, 17].             ...  Limitations of this study included dataset bia...          
+13                                                NaN             ...  eases, ages, devices, or ethnicities were repr...          
+14                                                NaN             ...  across categories), and incomplete dermoscopic...          
+15                         5. DISCUSSION &amp; CONCLUSION             ...                                                NaN          
+16                                                NaN             ...  notations. Reliance on single evaluation metri...          
+17                                                NaN             ...  combinations may also be a limitation [27]. Fu...          
+18  The International Skin Imaging Collaboration (...             ...                                                NaN          
+19                                                NaN             ...  lenges will attempt to address these issues in...          
+20  was used to host the second public challenge o...             ...                                                NaN          
+21                                                NaN             ...                                     the community.          
+22  sion Analysis Toward Melanoma Detection at the...             ...                                                NaN          
+23  tional Symposium on Biomedical Imaging (ISBI) ...             ...                                                NaN          
+24  challenge was divided into 3 tasks: segmentati...             ...                                      6. REFERENCES          
+25  tection (4 classes), and disease classificatio...             ...                                                NaN          
+26  images were available for training, 150 for va...             ...  [1] Rogers HW, Weinstock MA, Feldman SR, Coldi...          
+27  600 for testing. The challenge involved 593 re...             ...  “Incidence estimate of nonmelanoma skin cancer...          
+28  pre-submissions, and 46 finalized submissions,...             ...  atinocyte carcinomas) in the US population, 20...          
+29  largest standardized and comparative study in ...             ...    Dermatol vol. 151, no. 10, pp. 1081-1086. 2015.          
+30  Analysis of segmentation results suggest that ...             ...           [2] “Cancer Facts &amp; Figures 2017”. Amer-          
+31  age Jaccard Index may not accurately reflect t...             ...              ican Cancer Society, 2017. Available:          
+32  images where automated segmentation falls outs...             ...      https://www.cancer.org/research/cancer-facts-          
+33  observer variability. Future challenges may ad...             ...  statistics/all-cancer-facts-figures/cancer-fac...          
+34  uation metric based on this observation. For e...             ...                                          2017.html          
+35  binary error may be more appropriate (segmenta...             ...  [3] Siegel, R.L., Miller, K.D., and Jemal, A.:...          
+36  or success), computed by either using multiple...             ...  tics, 2017,” CA: A Cancer Journal for Clinicia...          
+37  per image to determine a segmentation differen...             ...                             no. 1, pp. 7-30. 2017.          
+38  threshold, or by choosing a fixed threshold as...             ...  [4] Brady, M.S., Oliveria, S.A., Christos, P.J...          
+39                            based on prior studies.             ...  Coit, D.G., Katz, J., Halpern, A.C.: “Patterns...          
+40  Poor participation was noted in dermoscopic fe...             ...  in patients with cutaneous melanoma.” Cancer. ...          
+
+[41 rows x 3 columns]]</msg>
+<status status="PASS" starttime="20221223 07:57:52.523" endtime="20221223 07:57:52.607"/>
+</kw>
+<kw name="Get Table On Page At Index" library="YASH.Tabula">
+<var>${Table2}</var>
+<arg>1710.05006.pdf</arg>
+<arg>2</arg>
+<arg>1</arg>
+<msg timestamp="20221223 07:57:55.206" level="INFO">Error in extracting table from pdf</msg>
+<msg timestamp="20221223 07:57:55.206" level="INFO">${Table2} = None</msg>
+<status status="PASS" starttime="20221223 07:57:52.609" endtime="20221223 07:57:55.206"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${Table2}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20221223 07:57:55.209" level="INFO">None</msg>
+<status status="PASS" starttime="20221223 07:57:55.208" endtime="20221223 07:57:55.210"/>
+</kw>
+<status status="PASS" starttime="20221223 07:57:43.675" endtime="20221223 07:57:55.212"/>
+</test>
+<doc>Template robot main suite.</doc>
+<status status="PASS" starttime="20221223 07:57:39.724" endtime="20221223 07:57:55.217"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tasks</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Tasks">Tasks</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20221223 07:57:48.050" level="WARN">Got stderr: Dec 23, 2022 7:57:44 AM org.apache.pdfbox.pdmodel.font.PDSimpleFont toUnicode
+WARNING: No Unicode mapping for circlecopyrt (13) in font XBRSXS+CMSY8
+</msg>
+<msg timestamp="20221223 07:57:52.423" level="WARN">Got stderr: Dec 23, 2022 7:57:48 AM org.apache.pdfbox.pdmodel.font.PDSimpleFont toUnicode
+WARNING: No Unicode mapping for circlecopyrt (13) in font XBRSXS+CMSY8
+</msg>
+</errors>
+</robot>
